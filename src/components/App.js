@@ -9,7 +9,8 @@ function App() {
   const [isEditProfilePopupOpen, setIsEditProfilePopupOpen] = useState(false);
   const [isAddPlacePopupOpen, setIsAddPlacePopupOpen] = useState(false);
   const [isEditAvatarPopupOpen, setIsEditAvatarPopupOpen] = useState(false);
-  const [selectedCard, setSelectedCard] = useState(0); //"null" не работает; '' приводит к ошибке в консоли
+  const [isImagePopupOpen, setIsImagePopupOpen] = useState(false);
+  const [selectedCard, setSelectedCard] = useState({});
 
   function handleEditAvatarClick() {
     setIsEditAvatarPopupOpen(true);
@@ -27,11 +28,13 @@ function App() {
     setIsEditProfilePopupOpen(false);
     setIsAddPlacePopupOpen(false);
     setIsEditAvatarPopupOpen(false);
-    setSelectedCard(0); //"null" не работает; '' приводит к ошибке в консоли
+    setIsImagePopupOpen(false);
+    setSelectedCard({});
   }
 
   function handleCardClick(card) {
-    setSelectedCard(card)
+    setIsImagePopupOpen(true);
+    setSelectedCard(card);
   }
 
   return (
@@ -125,6 +128,7 @@ function App() {
 
       <ImagePopup
         card={selectedCard}
+        isOpen={isImagePopupOpen}
         onClose={closeAllPopups}
       />
     </div>

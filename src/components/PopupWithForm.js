@@ -16,11 +16,10 @@ export default function PopupWithForm({
                     noValidate
                 >
                     {children}
-                    <input
+                    <button
                         type="submit"
                         className={`popup__submit popup__submit_section_${name} button-hover`}
-                        value={submitValue}
-                    />
+                    >{submitValue}</button>
                 </form>
                 <button
                     type="button"

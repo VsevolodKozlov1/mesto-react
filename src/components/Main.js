@@ -10,11 +10,11 @@ export default function Main({
     onAddPlace,
     onEditAvatar,
     onCardClick,
-    card
 }) {
     const [userName, setUserName] = useState('');
     const [userDescription, setUserDescription] = useState('');
     const [userAvatar, setUserAvatar] = useState('');
+    const [cards, setCards] = useState([]);
 
 
     useEffect(() => {
@@ -24,6 +24,11 @@ export default function Main({
                 setUserDescription(data.about);
                 setUserAvatar(data.avatar);
             });
+
+        api.getInitialCards()
+            .then(data => {
+                setCards(data);
+            })
     })
 
     return (
@@ -53,9 +58,13 @@ export default function Main({
                 </button>
             </section>
             <section className="gallery">
-                <Card
-                    onCardClick={onCardClick}
-                />
+                {cards.map(card => (
+                    <Card
+                        card={card}
+                        onCardClick={onCardClick}
+                        key={card._id}
+                    />
+                ))}
             </section>
         </main>
     )
