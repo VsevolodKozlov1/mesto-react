@@ -3,6 +3,9 @@
 @import url(./blocks/page/page.css);
 @import url(./blocks/header/header.css);
 @import url(./blocks/header/__logo/header__logo.css);
+@import url(./blocks/header/__container/header__container.css);
+@import url(./blocks/header/__email/header__email.css);
+@import url(./blocks/header/__redirect/header__redirect.css);
 @import url(./blocks/profile/profile.css);
 @import url(./blocks/profile/__avatar/profile__avatar.css);
 @import url(./blocks/profile/__avatar-hover/profile__avatar-hover.css);
@@ -30,6 +33,7 @@
 @import url(./blocks/popup/__container/popup__container.css);
 @import url(./blocks/popup/__container/_confirm/popup__container_confirm.css);
 @import url(./blocks/popup/__container/_avatar/popup__container_avatar.css);
+@import url(./blocks/popup/__container/_auth/popup__container_auth.css);
 @import url(./blocks/popup/__header/popup__header.css);
 @import url(./blocks/popup/__input/popup__input.css);
 @import url(./blocks/popup/__span-error/popup__span-error.css);
@@ -40,9 +44,17 @@
 @import url(./blocks/popup/__figure/popup__figure.css);
 @import url(./blocks/popup/__photo/popup__photo.css);
 @import url(./blocks/popup/__caption/popup__caption.css);
+@import url(./blocks/popup/__auth-tip/popup__auth-tip.css);
+@import url(./blocks/popup/__auth-icon/popup__auth-icon.css);
 @import url(./blocks/footer/footer.css);
 @import url(./blocks/footer/__copyright/footer__copyright.css);
 @import url(./blocks/button-hover/button-hover.css);
+@import url(./blocks/auth/auth.css);
+@import url(./blocks/auth/__header/auth__header.css);
+@import url(./blocks/auth/__form/auth__form.css);
+@import url(./blocks/auth/__input/auth__input.css);
+@import url(./blocks/auth/__submit/auth__submit.css);
+@import url(./blocks/auth/__login-link/auth__login-link.css);
 
 /* стилизация body не по БЭМ, т.к. body не является частью React-компонента */
 body {

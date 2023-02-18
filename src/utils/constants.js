@@ -7,6 +7,14 @@ const apiOptions = {
   },
 }
 
+const apiAuthOptions = {
+  url: 'https://auth.nomoreparties.co',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+}
+
 export {
-  apiOptions
+  apiOptions,
+  apiAuthOptions
 };
